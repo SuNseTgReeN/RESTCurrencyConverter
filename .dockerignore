@@ -1,0 +1,9 @@
+.git
+.gitignore
+poetry.lock
+pyproject.toml
+.env.example
+
+# IDE
+.idea
+.vscode

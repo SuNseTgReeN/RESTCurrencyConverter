@@ -1,0 +1,21 @@
+version: '3.9'
+
+x-app: &default-app
+  build: .
+
+
+x-env: &env
+  env_file:
+    - .env
+
+services:
+  django:
+    <<: [*default-app, *env]
+    container_name: django
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/app
+
+volumes:
+  pgdbdata:
